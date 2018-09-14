@@ -89,7 +89,7 @@ function! s:setup_new_wiki_buffer()
 
   " this makes that ftplugin/vimwiki.vim and afterwards syntax/vimwiki.vim are
   " sourced
-  setfiletype vimwiki
+  setfiletype vimwiki.markdown
 
 endfunction
 
@@ -103,7 +103,7 @@ function! s:setup_buffer_enter()
   endif
 
   if &filetype != 'vimwiki'
-    setfiletype vimwiki
+    setfiletype vimwiki.markdown
   endif
 
   call s:set_global_options()
